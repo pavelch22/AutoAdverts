@@ -1,0 +1,13 @@
+1) Download and install the MySQL database,
+   which can be found here: http://dev.mysql.com/downloads/.
+
+2) Create user and schema.
+
+3) Import:
+    - structure.sql;
+    - roles.sql;
+    - set_admin_here.sql;
+    - engine_types.sql (optional);
+    - autocatalog.sql (optional).
+
+4) Configure datasource.

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <display-name>Auto Adverts</display-name>
+
+    <welcome-file-list>
+        <welcome-file>show_adverts</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>some@somedomain.com</param-value>
+        <description>Contact information</description>
+    </context-param>
+
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/adverts</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error</location>
+    </error-page>
+
+    <servlet>
+        <servlet-name>ShowError</servlet-name>
+        <servlet-class>controller.ShowErrorController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowError</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <!--Users-->
+    <!--Show-->
+    <servlet>
+        <servlet-name>ShowUsers</servlet-name>
+        <servlet-class>controller.ShowUsersController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowUsers</servlet-name>
+        <url-pattern>/show_users</url-pattern>
+    </servlet-mapping>
+
+    <!--Registration-->
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>controller.RegistrationController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>controller.RegisterUserController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!--Login-->
+    <servlet>
+        <servlet-name>Authentication</servlet-name>
+        <servlet-class>controller.AuthenticationController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Authentication</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogIn</servlet-name>
+        <servlet-class>controller.LogInController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogIn</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!--Logout-->
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>controller.LogOutController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!--Profile-->
+    <servlet>
+        <servlet-name>ShowProfile</servlet-name>
+        <servlet-class>controller.ShowProfileController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowProfile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <!--Update-->
+    <servlet>
+        <servlet-name>UpdateUser</servlet-name>
+        <servlet-class>controller.UpdateUserController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateUser</servlet-name>
+        <url-pattern>/update_user</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete-->
+    <servlet>
+        <servlet-name>DeleteUser</servlet-name>
+        <servlet-class>controller.DeleteUserController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteUser</servlet-name>
+        <url-pattern>/delete_user</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Admin Area-->
+    <servlet>
+        <servlet-name>ShowAdminArea</servlet-name>
+        <servlet-class>controller.ShowAdminAreaController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowAdminArea</servlet-name>
+        <url-pattern>/admin_area</url-pattern>
+    </servlet-mapping>
+
+    <!--Grant Privileges-->
+    <servlet>
+        <servlet-name>GrantPrivileges</servlet-name>
+        <servlet-class>controller.GrantModeratorController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GrantPrivileges</servlet-name>
+        <url-pattern>/grant_privileges</url-pattern>
+    </servlet-mapping>
+
+    <!--Revoke Privileges-->
+    <servlet>
+        <servlet-name>RevokePrivileges</servlet-name>
+        <servlet-class>controller.RevokeModeratorController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RevokePrivileges</servlet-name>
+        <url-pattern>/revoke_privileges</url-pattern>
+    </servlet-mapping>
+
+    <!--AutoCatalog-->
+    <servlet>
+        <servlet-name>ShowAutoCatalog</servlet-name>
+        <servlet-class>controller.ShowAutoCatalogController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowAutoCatalog</servlet-name>
+        <url-pattern>/auto_catalog</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Brands-->
+    <servlet>
+        <servlet-name>ShowBrands</servlet-name>
+        <servlet-class>controller.ShowBrandsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowBrands</servlet-name>
+        <url-pattern>/brands</url-pattern>
+    </servlet-mapping>
+
+    <!--Insert Brand-->
+    <servlet>
+        <servlet-name>InsertBrand</servlet-name>
+        <servlet-class>controller.InsertBrandController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertBrand</servlet-name>
+        <url-pattern>/insert_brand</url-pattern>
+    </servlet-mapping>
+
+    <!--Update Brand-->
+    <servlet>
+        <servlet-name>UpdateBrand</servlet-name>
+        <servlet-class>controller.UpdateBrandController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateBrand</servlet-name>
+        <url-pattern>/update_brand</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete Brand-->
+    <servlet>
+        <servlet-name>DeleteBrand</servlet-name>
+        <servlet-class>controller.DeleteBrandController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteBrand</servlet-name>
+        <url-pattern>/delete_brand</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Models-->
+    <servlet>
+        <servlet-name>ShowModels</servlet-name>
+        <servlet-class>controller.ShowModelsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowModels</servlet-name>
+        <url-pattern>/models</url-pattern>
+    </servlet-mapping>
+
+    <!--Insert Model-->
+    <servlet>
+        <servlet-name>InsertModel</servlet-name>
+        <servlet-class>controller.InsertModelController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertModel</servlet-name>
+        <url-pattern>/insert_model</url-pattern>
+    </servlet-mapping>
+
+    <!--Update Model-->
+    <servlet>
+        <servlet-name>UpdateModel</servlet-name>
+        <servlet-class>controller.UpdateModelController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateModel</servlet-name>
+        <url-pattern>/update_model</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete Model-->
+    <servlet>
+        <servlet-name>DeleteModel</servlet-name>
+        <servlet-class>controller.DeleteModelController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteModel</servlet-name>
+        <url-pattern>/delete_model</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Engine Types-->
+    <servlet>
+        <servlet-name>ShowEngineTypes</servlet-name>
+        <servlet-class>controller.ShowEngineTypesController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowEngineTypes</servlet-name>
+        <url-pattern>/engine_types</url-pattern>
+    </servlet-mapping>
+
+    <!--Insert Engine Type-->
+    <servlet>
+        <servlet-name>InsertEngineType</servlet-name>
+        <servlet-class>controller.InsertEngineTypeController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertEngineType</servlet-name>
+        <url-pattern>/insert_engine_type</url-pattern>
+    </servlet-mapping>
+
+    <!--Update Engine Type-->
+    <servlet>
+        <servlet-name>UpdateEngineType</servlet-name>
+        <servlet-class>controller.UpdateEngineTypeController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateEngineType</servlet-name>
+        <url-pattern>/update_engine_type</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete Engine Type-->
+    <servlet>
+        <servlet-name>DeleteEngineType</servlet-name>
+        <servlet-class>controller.DeleteEngineTypeController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteEngineType</servlet-name>
+        <url-pattern>/delete_engine_type</url-pattern>
+    </servlet-mapping>
+
+    <!--Adverts-->
+    <!--Show Adverts-->
+    <servlet>
+        <servlet-name>ShowAdverts</servlet-name>
+        <servlet-class>controller.ShowAdvertsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowAdverts</servlet-name>
+        <url-pattern>/show_adverts</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Advert-->
+    <servlet>
+        <servlet-name>ShowAdvert</servlet-name>
+        <servlet-class>controller.ShowAdvertController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowAdvert</servlet-name>
+        <url-pattern>/show_advert</url-pattern>
+    </servlet-mapping>
+
+    <!--Show Insert Advert Form-->
+    <servlet>
+        <servlet-name>ShowAdvertCreation</servlet-name>
+        <servlet-class>controller.ShowAdvertCreationController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowAdvertCreation</servlet-name>
+        <url-pattern>/create_advert</url-pattern>
+    </servlet-mapping>
+
+    <!--Insert Advert-->
+    <servlet>
+        <servlet-name>InsertAdvert</servlet-name>
+        <servlet-class>controller.InsertAdvertController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertAdvert</servlet-name>
+        <url-pattern>/insert_advert</url-pattern>
+    </servlet-mapping>
+
+    <!--Update Advert-->
+    <servlet>
+        <servlet-name>UpdateAdvert</servlet-name>
+        <servlet-class>controller.UpdateAdvertController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateAdvert</servlet-name>
+        <url-pattern>/update_advert</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete Advert-->
+    <servlet>
+        <servlet-name>DeleteAdvert</servlet-name>
+        <servlet-class>controller.DeleteAdvertController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteAdvert</servlet-name>
+        <url-pattern>/delete_advert</url-pattern>
+    </servlet-mapping>
+
+    <!--Print Image-->
+    <servlet>
+        <servlet-name>PrintImage</servlet-name>
+        <servlet-class>controller.ShowImageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PrintImage</servlet-name>
+        <url-pattern>/print_image</url-pattern>
+    </servlet-mapping>
+
+    <!--Filers-->
+    <filter>
+        <filter-name>LoggingFilter</filter-name>
+        <filter-class>controller.LoggingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoggingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

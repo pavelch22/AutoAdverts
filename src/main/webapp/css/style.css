@@ -1,0 +1,271 @@
+body {
+    background-color: #ffffff;
+}
+
+#container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #888888;
+}
+
+#header {
+    margin-bottom: 10px;
+    background-color: #e0e0e0;
+    border-radius: 15px 15px 0 0;
+}
+
+#content {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #e0e0e0;
+    border-radius: 0 0 15px 15px;
+}
+
+h1, h3, h4 {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+#header p {
+    text-align: right;
+    margin: 0;
+    padding: 0 20px 5px 0;
+}
+
+#footer p {
+    text-align: center;
+    margin: 0;
+}
+
+#auth-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#auth-form div {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+#auth-form div label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+#auth-form div input, select, textarea {
+    width: 40%;
+}
+
+.auth-link {
+    margin: 5px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 75%;
+}
+
+#change-pass-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    display: none;
+}
+
+#change-pass-form div {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+#change-pass-form div label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+#change-pass-form div input {
+    width: 30%;
+}
+
+.create-ad-link {
+    text-align: right;
+    padding: 0 20px;
+}
+
+.table-ads {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.table-ads th {
+    border-bottom: 1px solid black;
+}
+
+.table-ads td {
+    border-bottom: 1px solid black;
+}
+
+.clickable-row:hover {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.button {
+    width: 30%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.no-ads {
+    text-align: center;
+}
+
+#engine-types {
+    margin: 10px auto;
+}
+
+#engine-form {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#models {
+    margin: 10px auto;
+}
+
+#model-form {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#model-controls {
+    display: none;
+}
+
+.controls {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#brands-container {
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+#brands {
+    max-width: 160px;
+}
+
+#brand-form {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#brand-controls {
+    display: inline-block;
+}
+
+.h-line {
+    border: 1px solid black;
+    background-color: #f3f3f3;
+}
+
+.h-line:hover {
+    cursor: pointer;
+}
+
+.tab {
+    display: none;
+    padding-bottom: 10px;
+}
+
+#users {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#users, #users th, #users td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.moderator {
+    font-weight: bold;
+    color: red;
+}
+
+.error-message {
+    text-align: center;
+}
+
+.go-back {
+    text-align: right;
+    text-decoration: underline;
+    padding: 0 40px;
+}
+
+.allow {
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+}
+
+.deny {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+}
+
+/*input[readonly] {*/
+    /*background-color: #ebebe4;*/
+/*}*/
+
+/*input[disabled] {*/
+    /*background-color: #ebebe4;*/
+/*}*/
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+a:active {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+img.preview {
+    width: 100px;
+}
+
+.fotorama__wrap {
+    margin: auto;
+}
