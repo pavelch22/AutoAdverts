@@ -1,4 +1,4 @@
-Tags: Java, JDBC, MySQL, SQL, Servlet, Tomcat, JSP, JSTL, JavaScript, jQuery, AJAX, JSON,
+Tags: Java, JDBC, MySQL, SQL, Servlet, Tomcat, JSP, JSTL, JavaScript, jQuery, AJAX, JSON, XML,
 HTML, CSS, Log4j, Maven
 
 
@@ -17,4 +17,4 @@ It's a web app that supports:
 
 Installation:
 1) Configure database (follow the instructions in the resources/db/autoadverts_db_setup_mysql.txt);
-2) Install Tomcat (https://tomcat.apache.org/download-90.cgi) and deploy autoadverts.war.
+2) Install Tomcat (https://tomcat.apache.org/download-90.cgi) and deploy autoadverts.war. (Configure $CATALINA_HOME)

@@ -1,7 +1,7 @@
 1) Download and install the MySQL database,
    which can be found here: http://dev.mysql.com/downloads/.
 
-2) Create user and schema.
+2) Create user and schema. (Default datasource values: schema = "auto_ads"; user = "autoads"; password = "7x9zXD5i")
 
 3) Import:
     - structure.sql;
